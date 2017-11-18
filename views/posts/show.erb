@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<p>by <%= @user_name %> on <%= @post.created_at.strftime("%Y-%m-%d") %></p>
+
+<%= @post.content %>
+<br /><br />
+<% if session[:user_id] %>
+<a href="/posts/<%= @post.id %>/edit">Edit Post</a>
+<% end %>
